@@ -1,0 +1,1 @@
+# Well this is a keystroke listener using the windows API written in C++17, this is accomplished using a function hook so it will create some lag.
