@@ -1,0 +1,1 @@
+### Kind of like jarvis/friday from iron man, this was truly an ambitious project which turned out to be some what similar to the original goal.It probably won't work anymore it needs a little fixing, Thats it.
