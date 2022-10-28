@@ -1,13 +1,6 @@
 //Author : Arun Krishnan
 //Roll no : AM.EN.U4CSE22004
 
-var  aud_1 = document.getElementById("aud_1")
-aud_1.volume = 0.4;
-
-$.getJSON('https://json.geoiplookup.io/?callback=?', function(data) {
-    localStorage.setItem('H2O',(JSON.stringify(data, null, 2)))
-});
-
 var elem = document.documentElement;
 function openFullscreen() {
     if (elem.requestFullscreen) {
@@ -39,60 +32,7 @@ $("body").click(()=>{
     toad.loop = true
 })
 
-var rev = "fwd";
-function titlebar(val){
-    var obj2 = JSON.parse(localStorage.getItem('H2O'))
-    var Bring = obj2["district"]
-    var msg  = "I wish i was there,RIP you'll never be forgotten";
-    var res = " ";
-    var speed = 75;
-    var pos = val;
-    msg = "Hey lemme pull up to your house in "+Bring+" ,on my way ;)";
-    var le = msg.length;
-    if(rev == "fwd"){
-        if(pos < le){
-            pos = pos+1;
-            scroll = msg.substr(0,pos);
-            document.title = scroll;
-            timer = window.setTimeout("titlebar("+pos+")",speed);
-        }
-        else {
-            rev = "bwd";
-            timer = window.setTimeout("titlebar("+pos+")",speed);
-        }
-    }
-    else {
-        if(pos > 0) {
-            pos = pos-1;
-            var ale = le-pos;
-            scrol = msg.substr(ale,le);
-            document.title = scrol;
-            timer = window.setTimeout("titlebar("+pos+")",speed);
-        }
-        else {
-            rev = "fwd";
-            timer = window.setTimeout("titlebar("+pos+")",speed);
-        }
-    }
-}
-titlebar(0);
-
 document.addEventListener('contextmenu', event => event.preventDefault());
-//Background change currrently suspended
-/*function chng1(){
-    $("body").css("background-image","url(./imgs/skull.gif)")
-    $("body").css("background-size","20rem 20rem")
-    
-}
-function chng2(){
-    $("body").css("background-image","url('./imgs/skull2.gif')")
-    $("body").css("background-size","cover")
-    
-}
-setInterval(chng2,3000)
-setInterval(chng1,4000)*/
-
-
 
 $(function() {
     $( "#terminal" ).draggable();
@@ -127,25 +67,15 @@ function main(){
     function prompt(s) { window.status = s }
     document.onload = TWT()
     function TWT(){
-        /*aud_1 = document.getElementById("aud_1");
-        aud_1.muted = false;
-        aud_1.play()*/
         return aud=1,ry=1
     }
-    /*function ms_move_1st_(){
-        aud_1 = document.getElementById("aud_1");
-        document.getElementById("body").addEventListener("mousemove",()=>{
-            aud_1.muted = false;
-            aud_1.play();
-        })        
-        return aud = 1;
-    }*/
+
     console.log("Bypass the login")
     console.log("admin")
     console.log(ry)
     var form = '<div style="width: 100%;display: table"><div style="display: table-cell; width: 1%"></div>&nbsp<form id="form" style="display: table-cell; width :100%"></form></div>'
     var input = '&nbsp&nbsp<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"  type="text" maxlength="20" class="nostyle" autofocus=""></input>'
-    var prompt = "<span id=\"white\"><strong><u>Guest@H2O</u></strong></span>"
+    var prompt = "<span id=\"white\"><strong><u>Guest@0x168</u></strong></span>"
     var sign = "<span id='violet'>:#~</span>"
     var div = "<div id=\"H2O\"></div>"
     $("#terminal-body").append(form)
@@ -282,50 +212,10 @@ function main(){
             $("input").remove()
             $("form").append(prompt+sign+input+"<br>"+"&nbsp")
         }
-        /*else if(res==="full"){
-            if(ry==1){
-                var history = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id='opace'>showing results for \"full\"</span>"
-                var response = "<div><span id='violet'>&nbsp&nbsp&nbsp&nbspTerminal fullscreen</span><span id='opace'>(Type full again to change to Normal screen)</span></div>"
-                var elem = document.documentElement;
-                function openFullscreen() {
-                    if (elem.requestFullscreen) {
-                        elem.requestFullscreen();
-                    } else if (elem.webkitRequestFullscreen) { 
-                        elem.webkitRequestFullscreen();
-                    } else if (elem.msRequestFullscreen) { 
-                        elem.msRequestFullscreen();
-                    }
-                }
-                openFullscreen()
-                $("form").append(history+"<br>"+"&nbsp")
-                $("form").append(response+"<br>")
-                $("input").remove()
-                $("form").append(prompt+sign+input+"<br>"+"&nbsp")
-                ry=0
-            }
-            else if(ry==0){
-                var history = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id='opace'>showing results for \"full\"</span>"
-                var response = "<div><span id='violet'>&nbsp&nbsp&nbsp&nbspTerminal Normal</span></div>"
-                function closeFullscreen() {
-                    if (document.exitFullscreen) {
-                      document.exitFullscreen();
-                    } else if (document.webkitExitFullscreen) { 
-                      document.webkitExitFullscreen();
-                    } else if (document.msExitFullscreen) {
-                      document.msExitFullscreen();
-                    }
-                  }
-                  closeFullscreen()
-                  $("form").append(history+"<br>"+"&nbsp")
-                  $("form").append(response+"<br>")
-                  $("input").remove()
-                  $("form").append(prompt+sign+input+"<br>"+"&nbsp")
-                  ry=1
-            }
-        }*/
+       
         else if(res==="dev"){
             var history = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id='opace'>showing results for \"dev\"</span>"
-            var response = "<div><span id='violet'>&nbsp&nbsp&nbsp&nbspHi, i go by the name Winters online i'm not usually active online however i might be on <br>&nbsp&nbsp&nbsp&nbspdiscord sometimes,that's about it</span></div>"
+            var response = "<div><span id='violet'>&nbsp&nbsp&nbsp&nbspHi,i'm Arun currently majoring in Computer Science and Engineering.</span></div>"
             $("form").append(history+"<br>"+"&nbsp")
             $("form").append(response+"<br>")
             $("input").remove()
@@ -333,7 +223,7 @@ function main(){
         }
         else if(res==="discord"){
             var history = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id='opace'>showing results for \"discord\"</span>"
-            var response = "<div><span id='violet'>&nbsp&nbsp&nbsp&nbspWinters#5900<span id=\"opace\">(not much active tho)</span></span></div>"
+            var response = "<div><span id='violet'>&nbsp&nbsp&nbsp&nbsp0x168#0303<span id=\"opace\">(not much active tho)</span></span></div>"
             $("form").append(history+"<br>"+"&nbsp")
             $("form").append(response+"<br>")
             $("input").remove()
@@ -341,7 +231,7 @@ function main(){
         }
         else if(res==="site"){
             var history = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id='opace'>showing results for \"site\"</span><br>"
-            var response = "&nbsp&nbsp&nbsp&nbsp&nbsp<span id=\"violet\"><a href=\"https://www.h2o-bit.cf/\">link</a></span><br>"
+            var response = "&nbsp&nbsp&nbsp&nbsp&nbsp<span id=\"violet\">The old site has been removed</a></span><br>"
             $("form").append(history+"<br>"+"&nbsp")
             $("form").append(response+"<br>")
             $("input").remove()
@@ -368,7 +258,7 @@ function main(){
         }
         else if(res==="info"){
             var history = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id='opace'>showing results for \"info\"</span><br>"
-            var response = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id=\"violet\">&nbsp&nbspUptime:<span id='green'>102days</span><br>&nbsp&nbsp&nbsp&nbsp&nbspTotal-visits:<span id='green'>3327</span><br>&nbsp&nbsp&nbsp&nbsp&nbspMade by:<span id='green'>Winters</span><br>&nbsp&nbsp&nbsp&nbsp&nbsptry to bypass the login,to see something interesting</span><br>"
+            var response = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id=\"violet\">&nbsp&nbspUptime:<span id='green'>102days</span><br>&nbsp&nbsp&nbsp&nbsp&nbspTotal-visits:<span id='green'>3327</span><br>&nbsp&nbsp&nbsp&nbsp&nbspMade by:<span id='green'>Arun Krishnan</span><br>&nbsp&nbsp&nbsp&nbsp&nbsptry to bypass the login,to see something interesting</span><br>"
             $("form").append(history+"<br>"+"&nbsp")
             $("form").append(response+"<br>")
             $("input").remove()
